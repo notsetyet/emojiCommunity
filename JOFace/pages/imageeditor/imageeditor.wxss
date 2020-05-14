@@ -1,0 +1,79 @@
+.container{
+  height:300px;
+  width:100%;
+}
+.bg{
+  position: absolute;
+  z-index:0;
+  height: 300px;
+  width:300px;
+}
+button{
+  margin-top:10px;
+
+}
+.hat{ 
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border: dashed 2px yellow;
+  top:100px;
+}
+.mask{ 
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border: dashed 2px yellow;
+  top:100px;
+}
+.handle,.cancel{
+  position: absolute;
+  z-index: 1;
+  width:20px;
+  height:20px;
+}
+.scrollView{
+   width: 100%; 
+   position: absolute;
+   bottom: 5px;
+   white-space: nowrap;
+}
+.imgList{
+  height: 70px;
+  width: 70px;
+  border:2px solid;
+  margin: 5px;
+}
+
+.imgList2{
+  height: 70px;
+  width: 70px;
+  border:2px solid;
+  margin: 5px;
+}
+
+.navbar {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+.navbar-item {
+    flex: 1.0;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: -1px;
+}
+.navbar-text {
+    display: block;
+    width: 30px;
+    padding: 10px;
+    margin: auto;
+}
+.navbar-text.active {
+    border-bottom: 2px solid #000;
+    color: #000;
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}

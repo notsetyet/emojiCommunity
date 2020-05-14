@@ -1,0 +1,95 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="top-view">
+    <view class="user">
+      <view class="row">
+
+        <image class="avatar" wx:if="{{userInfo}}" src="{{userInfo.avatarUrl}}"></image>
+        <image class="avatar" wx:else="{{userInfo}}" src="/static/posts/jia.png"></image>
+
+        <view class="name" wx:if="{{userInfo}}">
+          <view class="nick">{{userInfo.nickName}}</view>
+        </view>
+        <view class="name" wx:else="{{userinfo}}">
+          <view class="login" bindtap="getUserInfo">登录</view>
+        </view>
+
+
+      </view>
+      <view class="site">
+        <navigator wx:if="{{userInfo}}" url="/pages/myposts/myposts">查看个人主页</navigator>       
+        <navigator wx:else="{{!userInfo}}" url="/pages/me/me">查看个人主页</navigator> 
+      </view>
+    </view>
+
+    <view class="numbers">
+      <view class="row">
+        <text>{{nums}}</text>
+        <navigator wx:if="{{userInfo}}" url="/pages/follow/follow">关注</navigator>
+        <navigator wx:if="{{!userInfo}}" url="/pages/me/me">关注</navigator>
+      </view>
+      <view class="row">
+        <text>{{fans}}</text>
+        <navigator wx:if="{{userInfo}}" url="/pages/fans/fans">粉丝</navigator>
+        <navigator wx:if="{{!userInfo}}" url="/pages/me/me">粉丝</navigator>
+      </view>
+      <view class="row">
+        <text>{{likes}}</text>
+        <navigator wx:if="{{userInfo}}" url="/pages/mystars/mystars">赞与收藏</navigator>
+        <navigator wx:if="{{!userInfo}}" url="/pages/me/me">赞与收藏</navigator>
+      </view>
+      <view class="row">
+        <text>{{friends}}</text>
+        <navigator wx:if="{{userInfo}}" url="/pages/index/index">好友动态</navigator>     
+        <navigator wx:if="{{!userInfo}}" url="/pages/me/me">好友动态</navigator>   
+      </view>
+    </view>
+
+  </view>
+
+  <view class="middle-view">
+    <view class="item">
+      <image></image>
+    </view>
+    <view class="item">
+      <image></image>
+    </view>
+    <view class="item">
+      <image></image>
+    </view>
+    <view class="item">
+      <image></image>
+    </view>
+    <view class="item">
+      <image></image>
+    </view>
+  </view>
+
+  <view class="function-view">
+    <view class="row">
+      <view class="avatar2">
+        <navigator class="nav1" wx:if="{{userInfo}}" url="/pages/postchris/postchris">搞头像</navigator>
+      
+        <navigator class="nav1" wx:else="{{!userInfo}}" url="/pages/me/me">请先登录</navigator>
+      </view>          
+    </view>
+    <view class="row">
+      <view class="emoji">
+        <navigator class="nav1" wx:if="{{userInfo}}" url="/pages/modifyPhoto/modify">P出专属表情包</navigator> 
+        <navigator class="nav1" wx:else="{{!userInfo}}" url="/pages/me/me">请先登录</navigator>
+      </view>       
+    </view>
+  </view>
+  <view class="contact-view">
+    <button open-type="contact">
+    </button>
+    <button bindtap="onClickCall">
+    </button>
+  </view>
+  <button class="logout" bindtap="onClickLogout">退出</button>
+</view>
+
+<!-- 
+  <button bindtap="onClickLogin">登录</button>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfoFunction">获取信息</button>
+ -->

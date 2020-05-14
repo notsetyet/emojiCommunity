@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/postchris/postchris",
+    "pages/me/me",
+    "pages/myposts/myposts",
+    "pages/follow/follow",
+    "pages/fans/fans",
+    "pages/mystars/mystars",
+    "pages/combine/combine",
+    "pages/imageeditor/imageeditor",
+    "pages/publish/publish",
+    "pages/publishSuccess/publishSuccess",
+    "pages/topic/topic",
+    "pages/newsDetail/newsDetail",
+    "pages/modifyPhoto/modify"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "JOFace",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "bordercolor": "black",
+        "iconPath": "static/tabbar/bar_home_black.png",
+        "selectedIconPath": "static/tabbar/bar_home_black.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "bordercolor": "black"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "bordercolor": "black",
+        "iconPath": "static/tabbar/bar_mine_black.png",
+        "selectedIconPath": "static/tabbar/bar_mine_black.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  }
+}
